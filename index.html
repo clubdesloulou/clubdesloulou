@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Loulou - Exclusivement pour Louis et Louise</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Club Loulou</h1>
+                </div>
+                <div class="nav-controls">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                    <select id="language-select" class="language-select">
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="en">🇬🇧 English</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title" data-fr="Bienvenue au Club Loulou !" data-en="Welcome to Club Loulou!">
+                    Bienvenue au Club Loulou !
+                </h2>
+                <p class="hero-subtitle" data-fr="Le club exclusif réservé aux Louis et Louise du monde entier" data-en="The exclusive club reserved for Louis and Louise worldwide">
+                    Le club exclusif réservé aux Louis et Louise du monde entier
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="member-count">1</span>
+                        <span class="stat-label" data-fr="Membres officiels" data-en="Official members">Membres officiels</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label" data-fr="Prénoms acceptés" data-en="Accepted names">Prénoms acceptés</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration">
+            <div class="container">
+                <div class="registration-card">
+                    <h3 data-fr="Rejoignez le Club !" data-en="Join the Club!">Rejoignez le Club !</h3>
+                    <p class="registration-description" data-fr="Seuls les Louis et Louise peuvent devenir membres officiels" data-en="Only Louis and Louise can become official members">
+                        Seuls les Louis et Louise peuvent devenir membres officiels
+                    </p>
+                    
+                    <form id="registration-form" class="registration-form">
+                        <div class="form-group">
+                            <label for="firstName" data-fr="Prénom *" data-en="First Name *">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" data-fr="Nom de famille *" data-en="Last Name *">Nom de famille *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-fr="Email *" data-en="Email *">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthYear" data-fr="Année de naissance *" data-en="Birth Year *">Année de naissance *</label>
+                            <input type="number" id="birthYear" name="birthYear" min="1900" max="2024" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" required>
+                                <span class="checkmark"></span>
+                                <span data-fr="J'accepte les conditions du Club Loulou" data-en="I accept the Club Loulou terms">
+                                    J'accepte les conditions du Club Loulou
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" data-fr="Devenir un Loulou officiel !" data-en="Become an official Loulou!">
+                            Devenir un Loulou officiel !
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h3 data-fr="Pourquoi le Club Loulou ?" data-en="Why Club Loulou?">Pourquoi le Club Loulou ?</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">👑</div>
+                        <h4 data-fr="Exclusivité" data-en="Exclusivity">Exclusivité</h4>
+                        <p data-fr="Seuls les vrais Louis et Louise sont admis" data-en="Only true Louis and Louise are admitted">
+                            Seuls vrais Louis et Louise sont admis
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌍</div>
+                        <h4 data-fr="Communauté mondiale" data-en="Global Community">Communauté mondiale</h4>
+                        <p data-fr="Connectez-vous avec des Loulou du monde entier" data-en="Connect with Loulou from around the world">
+                            Connectez-vous avec des Loulou du monde entier
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎉</div>
+                        <h4 data-fr="Événements spéciaux" data-en="Special Events">Événements spéciaux</h4>
+                        <p data-fr="Participez à des événements exclusifs réservés aux membres" data-en="Participate in exclusive member-only events">
+                            Participez à des événements exclusifs réservés aux membres
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Club Loulou. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            <p class="footer-note" data-fr="*une exception sera faite pour Loïc Prosper mais c'est vraiment parce qu'il est sympathique." data-en="*An exception will be made for Loïc Prosper but only because he's nice. ">
+                *une exception sera faite pour Loïc Prosper mais c'est vraiment parce qu'il est sympathique. 
+            </p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-icon">🎉</div>
+            <h3 data-fr="Félicitations !" data-en="Congratulations!">Félicitations !</h3>
+            <p id="success-message" data-fr="Bienvenue dans le Club Loulou ! Vous êtes maintenant un membre officiel." data-en="Welcome to Club Loulou! You are now an official member.">
+                Bienvenue dans le Club Loulou ! Vous êtes maintenant un membre officiel.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
